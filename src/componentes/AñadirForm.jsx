@@ -39,7 +39,7 @@ export default function AñadirForm({ onAddForm }) {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/congelador/add', {
+            const response = await fetch('p01--freezier-service--wvg6d2q5sfn9.code.run/congelador/add', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

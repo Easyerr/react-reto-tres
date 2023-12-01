@@ -33,7 +33,7 @@ export default function Register(){
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:3000/user', {
+            const response = await fetch('p01--freezier-service--wvg6d2q5sfn9.code.run/user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
