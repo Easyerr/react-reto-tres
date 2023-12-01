@@ -35,7 +35,7 @@ export default function Login(){
     
 
         try {
-            const response = await fetch('p01--freezier-service--wvg6d2q5sfn9.code.run/auth/login', {
+            const response = await fetch('https://p01--freezier-service--wvg6d2q5sfn9.code.run/auth/login', {
                 method: 'POST',
                 headers: {//token
                     'Content-Type': 'application/json',

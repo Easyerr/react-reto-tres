@@ -30,7 +30,7 @@ export default function Cajones() {
 
     useEffect(() => {
         setLoading(true);
-        fetch('p01--freezier-service--wvg6d2q5sfn9.code.run/congelador/all',{
+        fetch('https://p01--freezier-service--wvg6d2q5sfn9.code.run/congelador/all',{
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`}})
             .then(response => response.json())
@@ -50,7 +50,7 @@ export default function Cajones() {
         if (cajonSeleccionado !== null) {
             setLoading(true);
             setCajonData(null)
-            fetch(`p01--freezier-service--wvg6d2q5sfn9.code.run/congelador/cajon/${cajonSeleccionado}`)
+            fetch(`https://p01--freezier-service--wvg6d2q5sfn9.code.run/congelador/cajon/${cajonSeleccionado}`)
                 .then(response => response.json())
                 .then(data => {
                     setCajonData(data);
@@ -74,7 +74,7 @@ export default function Cajones() {
     const eliminarElemento = async (i) => {
         console.log(cajonData.elementos, i);
         try {
-            const response = await fetch(`p01--freezier-service--wvg6d2q5sfn9.code.run/congelador/eat/${cajonData._id}`, {
+            const response = await fetch(`https://p01--freezier-service--wvg6d2q5sfn9.code.run/congelador/eat/${cajonData._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
