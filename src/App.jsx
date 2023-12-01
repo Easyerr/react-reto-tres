@@ -17,6 +17,7 @@ function App() {
         <Header />
       </div>
         <Routes>
+          <Route path="/" element={<Login />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/cajones" element={<Cajones />}></Route> 
